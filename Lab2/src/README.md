@@ -301,4 +301,4 @@ ___
       50
      
       
-#### [&решение]()
+#### [&решение](https://github.com/Ma-XD/Alg-and-Data-Str/blob/main/Lab2/src/CountExp.java)
