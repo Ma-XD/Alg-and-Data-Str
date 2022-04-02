@@ -3,7 +3,7 @@ import java.util.Scanner;
 import java.util.Stack;
 
 public class SortByStack {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         final String PUSH = "push", POP = "pop";
         Scanner sc = new Scanner(System.in);
         StringBuilder actions = new StringBuilder();
@@ -17,13 +17,13 @@ public class SortByStack {
                 st.push(x);
                 actions.append(PUSH);
                 actions.append("\n");
-            } else if( (int)st.peek() > x) {
+            } else if (st.peek() > x) {
                 st.push(x);
                 actions.append(PUSH);
                 actions.append("\n");
             } else {
-                while ( !st.empty() && (int)st.peek() < x ) {
-                    ans[index++] = (int)st.pop();
+                while (!st.empty() && st.peek() < x) {
+                    ans[index++] = st.pop();
                     actions.append(POP);
                     actions.append("\n");
                 }
@@ -33,7 +33,7 @@ public class SortByStack {
             }
         }
         while (!st.empty()) {
-            ans[index++] = (int)st.pop();
+            ans[index++] = st.pop();
             actions.append(POP);
             actions.append("\n");
         }

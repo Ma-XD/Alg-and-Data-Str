@@ -268,8 +268,8 @@ public class MinStack {
     public static void main(String[] args) throws IOException {
         Scanner sc = new Scanner(System.in);
         PrintWriter writer = new PrintWriter(System.out);
-        Stack st = new Stack();
-        Stack stMin = new Stack();
+        Stack<Integer> st = new Stack<>();
+        Stack<Integer> stMin = new Stack<>();
         int n = sc.nextInt(), x, operation;
         for (int i = 0; i < n; i++) {
             operation = sc.nextInt();

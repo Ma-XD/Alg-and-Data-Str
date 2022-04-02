@@ -15,14 +15,14 @@ public class Postfix {
                 operation = sc.next().charAt(0);
                 switch (operation) {
                     case '+':
-                        stack.push( (long) stack.pop() + (long) stack.pop());
+                        stack.push(stack.pop() + stack.pop());
                         break;
                     case '-':
-                        long a = (long) stack.pop(), b = (long) stack.pop();
+                        long a = stack.pop(), b = stack.pop();
                         stack.push(b - a);
                         break;
                     case '*':
-                        stack.push( (long) stack.pop() * (long) stack.pop());
+                        stack.push(stack.pop() * stack.pop());
                         break;
                 }
             }
