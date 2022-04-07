@@ -25,7 +25,7 @@ public class Grasshopper {
         }
 
         System.out.println(d[n - 1]);
-        LinkedList<Integer> col = new LinkedList<Integer>();
+        LinkedList<Integer> col = new LinkedList<>();
         int count = 0;
         int i = n - 1;
         while (i > 0) {
