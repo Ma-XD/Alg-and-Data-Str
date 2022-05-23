@@ -7,3 +7,5 @@
 ### Lab 2. Stacks, queues, DSU. [README.md](https://github.com/Ma-XD/Alg-and-Data-Str/blob/main/Lab2/README.md)
 
 ### Lab 3. Dynamic programming. [README.md](https://github.com/Ma-XD/Alg-and-Data-Str/blob/main/Lab3/README.md)
+
+### Lab 5. Search tree. [README.md](https://github.com/Ma-XD/Alg-and-Data-Str/blob/main/Lab5/README.md)
