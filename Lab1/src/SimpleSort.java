@@ -1,52 +1,46 @@
-import java.util.*;
+import java.io.PrintWriter;
+import java.util.Scanner;
 
-public class SimpleSort {
+public class Main {
 
-    public static void quickSort(int[] arr, int l, int r) {
-        int x = arr[(l + r) / 2];
-
+    public static void quickSort(int[] a, int l, int r) {
         if (r - l < 1) {
             return;
         }
+        int x = a[(r + l) / 2];
 
-        int lCnt = l, rCnt = r;
-        while (lCnt <= rCnt) {
+        int lx = l, rx = r;
+        while (lx <= rx) {
+            while (a[lx] < x) lx++;
+            while (a[rx] > x) rx--;
 
-            while (arr[lCnt] < x) {
-                lCnt++;
-            }
-
-            while (arr[rCnt] > x) {
-                rCnt--;
-            }
-
-            if (lCnt <= rCnt) {
-                int tmp = arr[lCnt];
-                arr[lCnt] = arr[rCnt];
-                arr[rCnt] = tmp;
-                lCnt++;
-                rCnt--;
+            if (lx <= rx) {
+                int t = a[lx];
+                a[lx] = a[rx];
+                a[rx] = t;
+                lx++;
+                rx--;
             }
         }
 
-        quickSort(arr, l, rCnt);
-        quickSort(arr, lCnt, r);
+        quickSort(a, l, rx);
+        quickSort(a, lx, r);
     }
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        int n = input.nextInt();
-        int[] arr = new int[n];
+        Scanner in = new Scanner(System.in);
+        PrintWriter writer = new PrintWriter(System.out);
+        int n = in.nextInt();
+        int [] a = new int[n];
         for (int i = 0; i < n; i++) {
-            arr[i] = input.nextInt();
+            a[i] = in.nextInt();
         }
-        quickSort(arr, 0, arr.length - 1);
-        // System.out.print(Arrays.toString(arr));
-        for (int a : arr) {
-            System.out.print(a + " ");
+        quickSort(a, 0, a.length - 1);
+        for (int ai : a) {
+            writer.print(ai + " ");
         }
-
-        input.close();
+        writer.flush();
+        in.close();
+        writer.close();
     }
 }
-
