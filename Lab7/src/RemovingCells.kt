@@ -26,6 +26,7 @@ fun main() {
             }
         }
     }
+
     var cnt = 0
     repeat(m) { r ->
         repeat(n) { c ->
