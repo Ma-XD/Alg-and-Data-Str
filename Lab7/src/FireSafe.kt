@@ -13,15 +13,15 @@ fun main() {
     val marked = BooleanArray(n + 1)
     val ordered = ArrayList<Int>(n)
 
-    fun dfsOut(v: Int) {
-        marked[v] = true
-        for (u in outE[v]) {
-            if (!marked[u]) {
-                dfsOut(u)
+        fun dfsOut(v: Int) {
+            marked[v] = true
+            for (u in outE[v]) {
+                if (!marked[u]) {
+                    dfsOut(u)
+                }
             }
+            ordered.add(v)
         }
-        ordered.add(v)
-    }
 
     for (v in 1..n) {
         if (!marked[v]) {
