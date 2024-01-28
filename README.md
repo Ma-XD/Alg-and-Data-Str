@@ -12,4 +12,4 @@
 
 ## Lab 6. [Queries on trees](https://github.com/Ma-XD/Alg-and-Data-Str/blob/main/Lab6#readme)
 
-## Lab 7. [Graphs and Strings](https://github.com/Ma-XD/Alg-and-Data-Str/tree/main#readme)
+## Lab 7. [Graphs and Strings](https://github.com/Ma-XD/Alg-and-Data-Str/tree/main/Lab7#readme)
